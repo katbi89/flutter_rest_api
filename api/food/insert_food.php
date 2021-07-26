@@ -14,7 +14,7 @@ if (isset($_POST["foo_name"])
   
 ) {
   	$cat_id = $_POST["cat_id"];
-     $foo_name = $_POST["foo_name"];
+    $foo_name = $_POST["foo_name"];
     $foo_name_en = $_POST["foo_name_en"];
 	$foo_price = $_POST["foo_price"];
 	$foo_offer = $_POST["foo_offer"] == null ? "" : $_POST["foo_offer"]  ;
@@ -42,8 +42,7 @@ if (isset($_POST["foo_name"])
     array_push($insertArray, htmlspecialchars(strip_tags($foo_offer)));
 	array_push($insertArray, htmlspecialchars(strip_tags($foo_info)));
     array_push($insertArray, htmlspecialchars(strip_tags($foo_info_en)));
-	
-	  array_push($insertArray, htmlspecialchars(strip_tags($img_image)));
+	array_push($insertArray, htmlspecialchars(strip_tags($img_image)));
     array_push($insertArray, htmlspecialchars(strip_tags($img_thumbnail)));
 
 

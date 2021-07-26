@@ -11,8 +11,7 @@ if (
     && isset($_POST["foo_name_en"])
     && isset($_POST["foo_price"])
 	&& isset($_POST["foo_info"])
-			 && isset($_POST["foo_info_en"])
-    
+	&& isset($_POST["foo_info_en"])
     && is_auth()
 ) {
 		if (!empty($_FILES["file"]['name']) )
@@ -57,17 +56,17 @@ if (
 	{
 		$sql = "update food 
 		set foo_name=?,foo_name_en=?,
-		set foo_price=?,foo_offer=?,
-		set foo_info=?,foo_info_en=?,
-		foo_image = ? , foo_thumbnail = ? 
+		foo_price=?,foo_offer=?,
+		foo_info=?,foo_info_en=?,
+		foo_image = ? ,foo_thumbnail = ? 
 		where foo_id=?";
 	}
 	else
 	{
 			$sql = "update food 
 		set foo_name=?,foo_name_en=?,
-		set foo_price=?,foo_offer=?,
-		set foo_info=?,foo_info_en=?
+		foo_price=?,foo_offer=?,
+		foo_info=?,foo_info_en=?
 		
 		
 		where foo_id=?";

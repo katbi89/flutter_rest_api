@@ -22,7 +22,7 @@ if (
     array_push($selectArray, "%" . htmlspecialchars(strip_tags($txtsearch)) . "%");
 	if(trim($txtsearch) != "")
 	{
-		$sql = "select * from food where  cat_id = ? and foo_name like ? order by foo_id desc limit $start , $end";
+		$sql = "select * from food where cat_id = ? and foo_name like ? order by foo_id desc limit $start , $end";
 		$result = dbExec($sql, $selectArray);
 	}
 	else

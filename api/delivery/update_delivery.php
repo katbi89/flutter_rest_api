@@ -54,15 +54,15 @@ if (
 	{
 		$sql = "update delivery 
 		set del_name=?,del_pwd=?,
-		set del_mobile=?,del_note=?,
+		del_mobile=?,del_note=?,
 		del_image = ? , del_thumbnail = ? 
 		where del_id=?";
 	}
 	else
 	{
-			$sql = "update food 
+			$sql = "update delivery 
 		set del_name=?,del_pwd=?,
-		set del_mobile=?,del_note=?
+		del_mobile=?,del_note=?
 		
 		
 		where del_id=?";
