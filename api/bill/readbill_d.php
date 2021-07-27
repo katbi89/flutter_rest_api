@@ -19,7 +19,10 @@ if (
 
 	
 
-		$sql = "select * from bill 
+		$sql = "select *
+        ,(select cus_name from customer where cus_id = bill.cus_id) as cus_name
+        ,(select cus_mobile from customer where cus_id = bill.cus_id) as cus_mobile
+         from bill 
 		order by bil_id desc limit $start , $end";
 	
 		$result = dbExec($sql, []);
