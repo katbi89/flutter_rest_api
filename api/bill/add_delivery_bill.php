@@ -11,14 +11,14 @@ if (
   
 ) {
 	//==============get paramter for table bill
-    $cus_id = $_POST["bil_id"];
+    $bil_id = $_POST["bil_id"];
 	$del_id = $_POST["del_id"];
 	
 	
     $insertArray = array();
-    array_push($insertArray, htmlspecialchars(strip_tags($bil_id)));
+
     array_push($insertArray, htmlspecialchars(strip_tags($del_id)));
-	
+	array_push($insertArray, htmlspecialchars(strip_tags($bil_id)));
 	  
 
     $sql = "update bill set del_id = ? where bil_id = ?";
